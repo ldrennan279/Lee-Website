@@ -1,0 +1,154 @@
+.container {
+  height: 63px;
+}
+.projectContainer {
+  margin: 20px;
+  cursor: pointer;
+}
+.projectContainer .projectWebDisplay:hover,
+.projectContainer .projectContainer:focus {
+  box-shadow: 0px 0px 15px #be4700;
+}
+.myPicture {
+  display: none;
+}
+.myNameHeader {
+  display: none;
+}
+.contactMeSection {
+  display: none;
+}
+.githublink {
+  width: 100vw;
+}
+.gitImage {
+  margin: 10px auto;
+  display: block;
+  padding: 10px;
+  border-radius: 50%;
+}
+.gitImage:hover {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px #be4700;
+}
+.project-section {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.projectDescription {
+  text-align: center;
+  margin: 0;
+  padding-top: 4px;
+}
+.projectWebDisplay {
+  position: relative;
+  margin: 0 auto;
+  height: 160px;
+  width: 80vw;
+  max-width: 300px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.62);
+}
+.projectMobileDisplay {
+  position: absolute;
+  height: 100px;
+  width: 55px;
+  bottom: -10px;
+  right: -10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.62);
+}
+.project-section figure {
+  margin: 0;
+  width: 100%;
+  color: white;
+}
+.project-section figure figcaption {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+/* project-1 images */
+
+.project-1 .projectWebDisplay {
+  background: url("../images/DiceGame.png");
+  background-size: cover;
+  opacity: 0.8;
+}
+.project-1 .projectMobileDisplay {
+  display: none;
+  background: gray;
+  color: white;
+  text-align: center;
+  border: 0.1px solid rgb(58, 58, 58);
+}
+/* project-2 images */
+
+.project-2 .projectWebDisplay {
+  opacity: 0.8;
+  background-image: url("../images/SnakeWebView.png");
+  background-size: cover;
+}
+.project-2 .projectMobileDisplay {
+  opacity: 1;
+  background-image: url("../images/SnakeMobileView.png");
+  background-size: cover;
+  border: 0.1px solid rgb(58, 58, 58);
+}
+/* project-3 images */
+.project-3 .projectWebDisplay {
+  opacity: 0.8;
+  background: gray;
+  color: white;
+  text-align: center;
+}
+.project-3 .projectMobileDisplay {
+  opacity: 0.8;
+  background: gray;
+  color: white;
+  text-align: center;
+  border: 0.1px solid rgb(58, 58, 58);
+}
+
+/************************
+****Tablet site view*****
+************************/
+
+@media (min-width: 406px) and (max-width: 899px) {
+  .project-section {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+/************************
+******Web site view******
+************************/
+
+@media screen and (min-width: 900px) {
+  .myPicture {
+    display: block;
+  }
+  .myNameHeader {
+    display: block;
+  }
+  .project-section {
+    width: 70%;
+  }
+  .projectContainer {
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .githublink a {
+    width: 100%;
+  }
+  .githublink img {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .contactMeSection {
+    display: block;
+  }
+}

@@ -1,0 +1,249 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Poiret One", cursive;
+}
+.container {
+  height: 650px;
+  max-width: 406px;
+}
+
+/* Welcome Picture */
+.myPicture img {
+  max-width: 490px;
+  border-radius: 50%;
+  border: 5px solid #be4700;
+  position: relative;
+  top: -45px;
+  left: -120px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.62);
+}
+.myNameHeader {
+  margin: 0 auto;
+  width: 100%;
+}
+.name h1 {
+  border-bottom: 2px solid #e7e7e7;
+  font-size: 2.8rem;
+}
+.myName h2 {
+  font-size: 2rem;
+}
+.name h1,
+h2 {
+  color: #be4700;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 250px;
+}
+
+/* ----------nav bar------------------------------ */
+.navBar {
+  max-width: 550px;
+}
+.mainMenu.active {
+  left: 0;
+  transition: ease-in 0.5s;
+}
+.mainMenu {
+  position: fixed;
+  left: -100%;
+  top: 0px;
+  width: 60vw;
+  height: 200vh;
+  background: #be4700;
+  margin: 0;
+  padding: 0;
+  transition: ease-out 1s;
+  z-index: 12;
+}
+.menuOption {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.mainMenu li {
+  list-style: none;
+  padding: 30px 10px;
+}
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hamburger-btn {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+}
+.bar {
+  display: block;
+  width: 40px;
+  height: 6px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #8a8a8a;
+  border-radius: 5px;
+}
+
+/* Universal css atributes for all pages  */
+.name .subPageHeaderDetails {
+  font-size: 2rem;
+  border: none;
+  padding-top: 15px;
+}
+.section {
+  margin: 0 auto;
+  padding: 30px 30px;
+}
+.section p {
+  color: rgb(93, 93, 93);
+  font-weight: bolder;
+  font-size: 0.95rem;
+}
+.contactMeSection {
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+}
+.contact-btns {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+.contact-btns li {
+  padding: 0;
+  margin: 0;
+}
+.contact-btns a {
+  margin: 0;
+  padding: 0;
+}
+.contact-btns img:hover {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 8px #be4700;
+}
+.img-btn {
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/************************
+****Tablet site view*****
+************************/
+
+@media (min-width: 500px) and (max-width: 999px) {
+  .container {
+    height: 660px;
+  }
+  .myPicture {
+    display: flex;
+    text-align: center;
+    width: 100vw;
+  }
+  .myNameHeader {
+    width: 100vw;
+    margin-top: 80px;
+  }
+  .contact-btns {
+    width: 100vw;
+  }
+  .name {
+    width: 100vw;
+  }
+}
+/************************
+******Web site view******
+************************/
+
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+    height: 100vh;
+  }
+  .container {
+    position: relative;
+    width: 350px;
+    /* height: 100%; */
+  }
+
+  .menuOption:hover,
+  .menuOption:focus {
+    text-shadow: 2px 2px 10px #000000;
+    padding: 1px 3px;
+    color: whitesmoke;
+  }
+
+  .myPicture img {
+    width: 320px;
+    position: relative;
+    top: -30px;
+    left: -80px;
+  }
+  .hamburger-btn {
+    display: none;
+  }
+  .navBar {
+    height: 0;
+  }
+  .mainMenu {
+    margin-top: 30px;
+    position: relative;
+    left: 0px;
+    height: auto;
+    width: auto;
+    background: none;
+    align-items: flex-start;
+  }
+  .mainMenu ul {
+    margin: 0;
+    padding: 0;
+  }
+  .mainMenu li {
+    padding: 20px;
+  }
+  .menuOption {
+    font-size: 16px;
+  }
+  .myNameHeader {
+    margin: 60px auto 10px;
+  }
+  .myNameHeader h1,
+  h2 {
+    margin: 0 auto;
+  }
+  .webWindow {
+    background-color: #8a8a8a;
+    background-image: url("../images/christopher-gower-vjMgqUkS8q8-unsplash.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 120vh;
+    border-left: solid 5px #be4700;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.62);
+  }
+  .subPageHeaderDetails {
+    display: none;
+  }
+  .myPicture {
+    display: block;
+  }
+  .myNameHeader {
+    display: block;
+  }
+  .currentPage {
+    color: #be4700;
+    text-shadow: 0px 0px 5px #be4700;
+    font-size: 1.25rem;
+  }
+}
